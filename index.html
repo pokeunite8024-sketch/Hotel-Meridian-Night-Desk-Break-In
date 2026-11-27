@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="badge" content="706f72746572">
+<title>Hotel Meridian – Night Desk Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Hotel Meridian</h1>
+  <p class="sub">Night desk back office. Staff only.</p>
+  <div class="steps" aria-hidden="true"><i class="on" id="s1"></i><i id="s2"></i><i id="s3"></i></div>
+  <section class="card" id="card">
+    <form id="f1" autocomplete="off">
+      <div class="note">Taped under the keyboard:<br>tonight’s password, scrambled by a 16th-century Frenchman<br><b>BCFGPZVVK</b><br>His key is whoever you are.<br>Your badge is stamped in the page’s head.</div>
+      <label for="u">Staff ID</label>
+      <input id="u" required>
+      <label for="p">Password</label>
+      <input id="p" type="password" required>
+      <button>Sign in</button>
+    </form>
+    <form id="f2" hidden autocomplete="off">
+      <p style="margin:0 0 6px"><strong>Verification</strong></p>
+      <p class="sub" style="margin-bottom:10px">Your key card number is stored in this browser under <code>keycard</code>, written in binary. Enter it doubled.</p>
+      <label for="c">Code</label>
+      <input id="c" inputmode="numeric" required>
+      <button>Verify</button>
+    </form>
+    <form id="f3" hidden autocomplete="off">
+      <p style="margin:0 0 6px"><strong>Master key</strong></p>
+      <p class="sub" style="margin-bottom:10px">The three things you proved, in the order you proved them, lowercase, joined with dashes.</p>
+      <label for="m">Master key</label>
+      <input id="m" required>
+      <button>Open the safe</button>
+    </form>
+    <div id="done" hidden>
+      <p style="margin:0"><strong>Safe open.</strong></p>
+      <p class="flag" id="flag"></p>
+      <p class="sub" style="margin:0">Nice work. Reload to play again.</p>
+    </div>
+    <p class="msg" id="msg" role="alert"></p>
+    <p class="small" id="tries"></p>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

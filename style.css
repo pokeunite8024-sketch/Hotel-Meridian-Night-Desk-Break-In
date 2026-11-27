@@ -1,0 +1,29 @@
+:root{--bg:#d9e0d3;--card:#f4f6f0;--ink:#1c2b2a;--mute:#5b6b66;--brass:#8f6a1c;--err:#8c3b2e;--ok:#2f6b4a;--note:#f2e08a;--line:#b9c4b4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17211f;--card:#212e2b;--ink:#e6ece4;--mute:#9db0a8;--brass:#d2a64a;--err:#e08c7c;--ok:#7fcf9f;--note:#e6d27a;--line:#3a4a46}}
+:root[data-theme="dark"]{--bg:#17211f;--card:#212e2b;--ink:#e6ece4;--mute:#9db0a8;--brass:#d2a64a;--err:#e08c7c;--ok:#7fcf9f;--note:#e6d27a;--line:#3a4a46}
+html{color-scheme:light dark;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:'Libre Franklin',system-ui,sans-serif;display:grid;place-items:center;padding:20px}
+main{width:100%;max-width:440px}
+h1{font-family:'Special Elite',monospace;font-weight:400;font-size:28px;margin:0 0 4px}
+.sub{color:var(--mute);margin:0 0 20px;font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.card.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+input{width:100%;font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+input:focus-visible,button:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+button{margin-top:18px;width:100%;font:inherit;font-weight:600;padding:12px;border:0;border-radius:6px;background:var(--ink);color:var(--card);cursor:pointer}
+.msg{min-height:22px;margin:12px 0 0;font-size:14px;color:var(--err)}
+.note{background:var(--note);color:#2a2410;font-family:'Special Elite',monospace;padding:14px 16px;margin:0 0 18px;transform:rotate(-1.5deg);box-shadow:2px 3px 0 rgba(0,0,0,.18);font-size:15px;line-height:1.5}
+.note b{letter-spacing:.12em}
+.seq{font-family:'Special Elite',monospace;font-size:26px;text-align:center;margin:6px 0 0;letter-spacing:.06em}
+.steps{display:flex;gap:6px;margin:0 0 16px}
+.steps i{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.steps i.on{background:var(--brass)}
+.flag{font-family:'Special Elite',monospace;color:var(--ok);font-size:20px;word-break:break-all;margin:10px 0}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){.card.shake{animation:none}}
+button:disabled{opacity:.5;cursor:not-allowed}
+.small{font-size:13px;color:var(--mute);margin:10px 0 0}
