@@ -10,7 +10,7 @@ Get into the system, work out what the porter knew, and open the safe.
 
 Capture the flag. It looks like this:
 
-`FLAG{...}`
+`ARGHYA{...}`
 
 ## How to play
 
